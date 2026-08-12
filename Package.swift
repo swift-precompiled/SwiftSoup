@@ -14,7 +14,7 @@ let package = Package(
     products: [
         .library(
             name: "SwiftSoup",
-            targets: ["SwiftSoup_PrecompiledProduct"]
+            targets: ["SwiftSoup"]
         ),
         .executable(
             name: "SwiftSoupProfile",
@@ -29,8 +29,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "SwiftSoup",
-            url: "https://github.com/swift-precompiled/SwiftSoup/releases/download/2.13.7/SwiftSoup-8d6a4284a994f454124d45c002f050a7cd7e03b90068597a79fa99ab49510785.xcframework.zip",
-            checksum: "8d6a4284a994f454124d45c002f050a7cd7e03b90068597a79fa99ab49510785"
+            url: "https://github.com/swift-precompiled/SwiftSoup/releases/download/2.13.7/SwiftSoup-7e8130a61079d7b8d39c35653e0e762d147bd8a76c899de29237c3938114b5cc.xcframework.zip",
+            checksum: "7e8130a61079d7b8d39c35653e0e762d147bd8a76c899de29237c3938114b5cc"
         ),
         .executableTarget(
             name: "SwiftSoupProfile",
@@ -38,10 +38,6 @@ let package = Package(
             path: "Executables/SwiftSoupProfile",
             sources: ["main.swift"],
             swiftSettings: [.unsafeFlags(["-Xfrontend", "-experimental-package-interface-load"])]
-        ),
-        .target(
-            name: "SwiftSoup_PrecompiledProduct",
-            dependencies: ["SwiftSoup_Aggregation"]
         )
     ]
 )
