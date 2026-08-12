@@ -25,12 +25,13 @@ let package = Package(
         .target(
             name: "SwiftSoup_Aggregation",
             dependencies: ["SwiftSoup"],
+            packageAccess: false,
             swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "SwiftSoup",
-            url: "https://github.com/swift-precompiled/SwiftSoup/releases/download/2.13.7/SwiftSoup-7e8130a61079d7b8d39c35653e0e762d147bd8a76c899de29237c3938114b5cc.xcframework.zip",
-            checksum: "7e8130a61079d7b8d39c35653e0e762d147bd8a76c899de29237c3938114b5cc"
+            url: "https://github.com/swift-precompiled/SwiftSoup/releases/download/2.13.7/SwiftSoup-98d38008fa42d8e7f35e5388fb84f7c76320a62cb20e715084ced1d50fa70e78.xcframework.zip",
+            checksum: "98d38008fa42d8e7f35e5388fb84f7c76320a62cb20e715084ced1d50fa70e78"
         ),
         .executableTarget(
             name: "SwiftSoupProfile",
